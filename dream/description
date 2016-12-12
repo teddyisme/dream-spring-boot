@@ -1,0 +1,18 @@
+1.请使用spring-boot:run启动;
+  或者在项目根目录下执行mvn package后,在target目录下执行java -jar SpringBoot-1.0-SNAPSHOT.war --service.port=8888
+  然后用http://127.0.0.1:8888/user/login访问
+
+2.建表语句
+CREATE TABLE tbl_user (
+  u_id        BIGINT       NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  phone       VARCHAR(11)  NOT NULL,
+  age         INT,
+  password    VARCHAR(255) NOT NULL,
+  name        VARCHAR(255),
+  sex         INT,
+  nick        VARCHAR(40),
+  createdTime DATETIME,
+  updateTime  DATETIME
+);
+
+
