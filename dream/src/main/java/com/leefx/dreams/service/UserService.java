@@ -9,10 +9,6 @@ import java.util.List;
  */
 public interface UserService {
 
-    User findById(Long id);
-
-    int insnert(User user);
-
     List<User> findAllUser();
 
 }

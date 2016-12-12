@@ -19,16 +19,6 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public User findById(Long id) {
-        return null;
-    }
-
-    @Override
-    public int insnert(User user) {
-        return 0;
-    }
-
-    @Override
     public List<User> findAllUser() {
         List<User> userList = userMapper.findAllUser();
         System.out.println(JSONArray.toJSONString(userList));

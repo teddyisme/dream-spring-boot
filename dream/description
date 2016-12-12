@@ -1,5 +1,8 @@
 1.请使用spring-boot:run启动;
-  或者在项目根目录下执行mvn package后,在target目录下执行java -jar SpringBoot-1.0-SNAPSHOT.war --service.port=8888
+
+  或者在项目根目录下执行mvn package后
+  (以下不执行，在配置文件中配置)
+  在target目录下执行java -jar SpringBoot-1.0-SNAPSHOT.war --service.port=8888
   然后用http://127.0.0.1:8888/user/login访问
 
 2.建表语句
