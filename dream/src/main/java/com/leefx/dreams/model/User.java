@@ -2,18 +2,26 @@ package com.leefx.dreams.model;
 
 
 import java.io.Serializable;
+import java.sql.Date;
 
 public class User implements Serializable {
     private Long u_id;
-    private String userName;
     private int age;
     private int sex;
     private String phone;
     private String password;
-    private String name;
+    private String userName;
     private String nick;
-    private String createdTime;
-    private String updateTime;
+    private Date createdTime;
+    private Date updateTime;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public Long getU_id() {
         return u_id;
@@ -55,13 +63,6 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getNick() {
         return nick;
@@ -71,27 +72,20 @@ public class User implements Serializable {
         this.nick = nick;
     }
 
-    public String getCreatedTime() {
+
+    public Date getCreatedTime() {
         return createdTime;
     }
 
-    public void setCreatedTime(String createdTime) {
+    public void setCreatedTime(Date createdTime) {
         this.createdTime = createdTime;
     }
 
-    public String getUpdateTime() {
+    public Date getUpdateTime() {
         return updateTime;
     }
 
-    public void setUpdateTime(String updateTime) {
+    public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserName() {
-        return userName;
     }
 }

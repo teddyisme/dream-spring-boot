@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/user")
-public class LoginController {
+public class UserController {
 
 //    private static final Logger log = LogManager.getLogger(LoginController.class.getName());
 
@@ -29,6 +29,12 @@ public class LoginController {
         List<User> userList = userService.findAllUser();
         modelMap.addAttribute("msg", JSONArray.toJSONString(userList));
         return "hello";
+    }
+
+    @RequestMapping("/register")
+    public String register(ModelMap modelMap){
+        userService.insertUser(new User());
+        return "register";
     }
 
 }
